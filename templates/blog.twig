@@ -1,0 +1,23 @@
+{% extends  'base.twig' %}
+{% block body %}
+
+
+    <h1 class="my-3">Blog</h1>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-9">
+    {% include 'section/posts.twig' with posts %}
+    <div class="row">
+        {% include 'section/pagination.twig' with pagination %}
+    </div>
+    </div>{# ./col-md-9 #}
+    <div class="col-md-3">
+    {% include 'section/about.twig' %}
+    </div>{# ./col-md-3 #}
+
+    </div>{# ./row#}
+    </div>{# ./container #}
+
+
+
+{% endblock %}
